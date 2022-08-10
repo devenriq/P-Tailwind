@@ -11,8 +11,9 @@
 }
 
 @variants hover {
-  .zoom{
-    transform: scale(2);
+  .color {
+    color: white;
+    background: rgb(12, 58, 52);
   }
 
 }
