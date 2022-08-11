@@ -13,7 +13,11 @@
 }
 
 .btn {
-  @apply px-4 py-1 rounded shadow-xl bg-gray-500 mx-auto block
+  @apply px-4 py-1 rounded shadow-xl bg-gray-500 block
+}
+
+.btn-primary{
+  @apply bg-primary
 }
 
 .btn:hover{

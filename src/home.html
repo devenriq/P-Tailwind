@@ -6,9 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/output.css" />
     <script src="https://use.fontawesome.com/b6cfc84df2.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <title>header</title>
   </head>
   <body>
+    <nav
+      x-data="{open: false}"
+      class="fixed z-10 w-full bg-secondary text-gray-100"
+    >
+      <div
+        class="px-2 bg-secondary text-white flex justify-between items-center"
+      >
+        <div>
+          <img
+            class="h-8 py-2 px-2"
+            src="./images/logo-w.svg"
+            alt="logo-brand"
+          />
+        </div>
+        <div class="text-2xl" @click="open = true">&equiv;</div>
+      </div>
+
+      <!-- Calificación y precio -->
+
+      <div x-show="open" @click.away="open=false">
+        <div class="my-1 mx-2">
+          <input class="form-control" type="search" placeholder="Búsqueda" />
+        </div>
+        <div class="mx-2 md:flex justify-around">
+          <div class="my-2 flex">
+            Precio:
+            <div class="ml-2">$</div>
+            <div class="ml-2">$$</div>
+            <div class="ml-2">$$$</div>
+            <div class="ml-2">$$$$</div>
+          </div>
+          <div class="my-2 flex">
+            <div class="">Calificación</div>
+            <div class="ml-2 text-primary">&starf;</div>
+            <div class="ml-px text-primary">&starf;</div>
+            <div class="ml-px text-primary">&starf;</div>
+            <div class="ml-px text-primary">&starf;</div>
+            <div class="ml-px">&starf;</div>
+          </div>
+          <div>
+            <button class="btn btn-primary">Filtrar</button>
+          </div>
+        </div>
+      </div>
+    </nav>
     <main class="mb-8">
       <div
         class="h-56 bg-no-repeat bg-cover bg-bottom md:h-100 md:bg-center mb-8"
@@ -105,7 +154,7 @@
           ></textarea>
         </div>
         <div>
-          <button class="btn">Enviar</button>
+          <button class="btn btn-primary mx-auto">Enviar</button>
         </div>
       </div>
     </main>
