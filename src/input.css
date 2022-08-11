@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+h1{
+  @apply text-3xl text-green-800 font-semibold;
+}
 
+h2{
+  @apply text-3xl text-blue-800 font-semibold;
+}
+
+h3{
+  @apply text-3xl text-red-800 font-semibold;
+}
 
 @responsive{
   .rotate-45{
@@ -17,3 +27,4 @@
   }
 
 }
+
